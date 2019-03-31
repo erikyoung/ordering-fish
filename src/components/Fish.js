@@ -20,7 +20,10 @@ export default class Fish extends Component {
      			<span className="price">{formatPrice(price)}</span>
      		</h3>
      		<p>{desc}</p>
-     		<button disabled={!isAvailable}>{isAvailable ? 'Add to Order' : 'Sold Out'}Add To Cart</button>
+     		<button 
+          disabled={!isAvailable}
+          onClick={() => this.props.addToOrder(this.props.index)}
+          >{isAvailable ? 'Add to Order' : 'Sold Out'}</button>
       </li>
     );
   }
