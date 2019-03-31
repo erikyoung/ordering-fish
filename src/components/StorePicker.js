@@ -10,8 +10,8 @@ myInput = React.createRef();
 
  goToStore = event => {
  	event.preventDefault();
- 	{/* const storeName = this.myInput.value.value;
- 	this.props.history.push(`/store/${storeName}`);  */}
+    const storeName = this.myInput.current.value;
+ 	this.props.history.push(`/store/${storeName}`);  
  }
 
 
